@@ -1,0 +1,540 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9407AA0D-9E04-483F-A8BE-549D31C9971D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignForms</RootNamespace>
+    <AssemblyName>DesignForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\custom.css" />
+    <Content Include="assets\css\layouts\dark.css" />
+    <Content Include="assets\css\layouts\rtl.css" />
+    <Content Include="assets\css\pages\fileupload.css" />
+    <Content Include="assets\css\pages\gallery.css" />
+    <Content Include="assets\css\pages\grid-animation\demo.css" />
+    <Content Include="assets\css\pages\gridstack.css" />
+    <Content Include="assets\css\pages\minimal-form\component.css" />
+    <Content Include="assets\css\pages\minimal-form\demo.css" />
+    <Content Include="assets\css\pages\new-signup\base.css" />
+    <Content Include="assets\css\pages\pages.css" />
+    <Content Include="assets\css\pages\pnotify.css" />
+    <Content Include="assets\css\pages\rangeslider.css" />
+    <Content Include="assets\css\pages\search\demo.css" />
+    <Content Include="assets\css\pages\search\style1.css" />
+    <Content Include="assets\css\pages\search\style2.css" />
+    <Content Include="assets\css\pages\search\style3.css" />
+    <Content Include="assets\css\pages\timeline.css" />
+    <Content Include="assets\css\pages\timeline\component.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\datta\datta-icon.css" />
+    <Content Include="assets\fonts\datta\fonts\pct.svg" />
+    <Content Include="assets\fonts\feather\css\feather.css" />
+    <Content Include="assets\fonts\flag\css\flag-icon.min.css" />
+    <Content Include="assets\fonts\fontawesome\css\fontawesome-all.min.css" />
+    <Content Include="assets\fonts\material\css\materialdesignicons.min.css" />
+    <Content Include="assets\fonts\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="assets\fonts\themify\fonts\themify9f24.svg" />
+    <Content Include="assets\fonts\themify\themify.css" />
+    <Content Include="assets\images\403.png" />
+    <Content Include="assets\images\auth-bg-big.jpg" />
+    <Content Include="assets\images\auth-bg.jpg" />
+    <Content Include="assets\images\bg-images\1.jpg" />
+    <Content Include="assets\images\bg-images\2.jpg" />
+    <Content Include="assets\images\bg-images\3.jpg" />
+    <Content Include="assets\images\bg-images\4.jpg" />
+    <Content Include="assets\images\bg-images\5.jpg" />
+    <Content Include="assets\images\bg-images\6.jpg" />
+    <Content Include="assets\images\bg-images\auth-bg-big.jpg" />
+    <Content Include="assets\images\bg-images\bgm.jpeg" />
+    <Content Include="assets\images\error\404-01.png" />
+    <Content Include="assets\images\error\monster-01.png" />
+    <Content Include="assets\images\error\monster-eyes-01.png" />
+    <Content Include="assets\images\error\shadows-01.png" />
+    <Content Include="assets\images\error\text-01.png" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\logo-dark.png" />
+    <Content Include="assets\images\logo-dark2.png" />
+    <Content Include="assets\images\logo-icon.ico" />
+    <Content Include="assets\images\logo-icon.png" />
+    <Content Include="assets\images\logo-icon1.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo1.png" />
+    <Content Include="assets\images\nav-bg\navbar-img-1.jpg" />
+    <Content Include="assets\images\nav-bg\navbar-img-2.jpg" />
+    <Content Include="assets\images\nav-bg\navbar-img-3.jpg" />
+    <Content Include="assets\images\nav-bg\navbar-img-4.jpg" />
+    <Content Include="assets\images\nav-bg\navbar-img-5.jpg" />
+    <Content Include="assets\images\nav-bg\navbar-img-6.html" />
+    <Content Include="assets\images\port.png" />
+    <Content Include="assets\images\port2.png" />
+    <Content Include="assets\images\sessionexpired.jpg" />
+    <Content Include="assets\images\squid.png" />
+    <Content Include="assets\images\user.png" />
+    <Content Include="assets\js\analytics.js" />
+    <Content Include="assets\js\horizontal-menu.js" />
+    <Content Include="assets\js\jquery.multi-select.js" />
+    <Content Include="assets\js\jquery.quicksearch.js" />
+    <Content Include="assets\js\map.js" />
+    <Content Include="assets\js\menu-setting.min.js" />
+    <Content Include="assets\js\pages\ac-alert.js" />
+    <Content Include="assets\js\pages\ac-datepicker.js" />
+    <Content Include="assets\js\pages\ac-gridstack.js" />
+    <Content Include="assets\js\pages\ac-lightbox.js" />
+    <Content Include="assets\js\pages\ac-nestable.js" />
+    <Content Include="assets\js\pages\ac-notification.js" />
+    <Content Include="assets\js\pages\ac-rangeslider.js" />
+    <Content Include="assets\js\pages\ac-rating.js" />
+    <Content Include="assets\js\pages\ac-slider.js" />
+    <Content Include="assets\js\pages\ac-toolbar.js" />
+    <Content Include="assets\js\pages\ac-tour.js" />
+    <Content Include="assets\js\pages\ac-treeview.js" />
+    <Content Include="assets\js\pages\chart-am-custom.js" />
+    <Content Include="assets\js\pages\chart-chart-custom.js" />
+    <Content Include="assets\js\pages\chart-echart-custom.js" />
+    <Content Include="assets\js\pages\chart-google-custom.js" />
+    <Content Include="assets\js\pages\chart-highchart-custom.js" />
+    <Content Include="assets\js\pages\chart-morris-custom.js" />
+    <Content Include="assets\js\pages\chart-nvd3-custom.js" />
+    <Content Include="assets\js\pages\chart-peity-custom.js" />
+    <Content Include="assets\js\pages\chart.js" />
+    <Content Include="assets\js\pages\dashboard-analytics.js" />
+    <Content Include="assets\js\pages\dashboard-crypto.js" />
+    <Content Include="assets\js\pages\dashboard-help.js" />
+    <Content Include="assets\js\pages\dashboard-project.js" />
+    <Content Include="assets\js\pages\dashboard-sale.js" />
+    <Content Include="assets\js\pages\data-advance-custom.js" />
+    <Content Include="assets\js\pages\data-ajax-custom.js" />
+    <Content Include="assets\js\pages\data-api-custom.js" />
+    <Content Include="assets\js\pages\data-autofill-custom.js" />
+    <Content Include="assets\js\pages\data-basic-custom.js" />
+    <Content Include="assets\js\pages\data-buttons-custom.js" />
+    <Content Include="assets\js\pages\data-column-custom.js" />
+    <Content Include="assets\js\pages\data-export-custom.js" />
+    <Content Include="assets\js\pages\data-header-custom.js" />
+    <Content Include="assets\js\pages\data-key-custom.js" />
+    <Content Include="assets\js\pages\data-plugin-custom.js" />
+    <Content Include="assets\js\pages\data-reorder-custom.js" />
+    <Content Include="assets\js\pages\data-responsive-custom.js" />
+    <Content Include="assets\js\pages\data-row-custom.js" />
+    <Content Include="assets\js\pages\data-scroller-custom.js" />
+    <Content Include="assets\js\pages\data-select-custom.js" />
+    <Content Include="assets\js\pages\data-server-custom.js" />
+    <Content Include="assets\js\pages\data-source-custom.js" />
+    <Content Include="assets\js\pages\data-styling-custom.js" />
+    <Content Include="assets\js\pages\editable-custom.js" />
+    <Content Include="assets\js\pages\error.js" />
+    <Content Include="assets\js\pages\form-advance-custom.js" />
+    <Content Include="assets\js\pages\form-masking-custom.js" />
+    <Content Include="assets\js\pages\form-picker-custom.js" />
+    <Content Include="assets\js\pages\form-select-custom.js" />
+    <Content Include="assets\js\pages\form-validation.js" />
+    <Content Include="assets\js\pages\google-maps.js" />
+    <Content Include="assets\js\pages\grid-animation\anime.min.js" />
+    <Content Include="assets\js\pages\grid-animation\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\pages\grid-animation\main.js" />
+    <Content Include="assets\js\pages\grid-animation\masonry.pkgd.min.js" />
+    <Content Include="assets\js\pages\invoice-list.js" />
+    <Content Include="assets\js\pages\leaflet-mapbox-gl.js" />
+    <Content Include="assets\js\pages\map-api.js" />
+    <Content Include="assets\js\pages\map-vector.js" />
+    <Content Include="assets\js\pages\minimal-form\classie.js" />
+    <Content Include="assets\js\pages\minimal-form\modernizr.custom.js" />
+    <Content Include="assets\js\pages\minimal-form\stepsForm.js" />
+    <Content Include="assets\js\pages\new-signup\demo1.js" />
+    <Content Include="assets\js\pages\new-signup\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\pages\new-signup\zxcvbn.js" />
+    <Content Include="assets\js\pages\offline-custom.js" />
+    <Content Include="assets\js\pages\page-croper.js" />
+    <Content Include="assets\js\pages\search\demo1.js" />
+    <Content Include="assets\js\pages\search\demo2.js" />
+    <Content Include="assets\js\pages\search\demo3.js" />
+    <Content Include="assets\js\pages\session-idle-Timeout-custom.js" />
+    <Content Include="assets\js\pages\sessionTimeout-custom.js" />
+    <Content Include="assets\js\pages\task-board.js" />
+    <Content Include="assets\js\pages\timeline\modernizr.custom.js" />
+    <Content Include="assets\js\pages\widget-data.js" />
+    <Content Include="assets\js\pages\wizard-custom.js" />
+    <Content Include="assets\js\pcoded.min.js" />
+    <Content Include="assets\js\vendor-all.min.js" />
+    <Content Include="assets\js\waves.min.js" />
+    <Content Include="assets\logo.ico" />
+    <Content Include="assets\plugins\animation\css\animate.min.css" />
+    <Content Include="assets\plugins\autosize\js\autosize.min.js" />
+    <Content Include="assets\plugins\bootstrap-datetimepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\plugins\bootstrap-datetimepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="assets\plugins\bootstrap-maxlength\js\bootstrap-maxlength.min.js" />
+    <Content Include="assets\plugins\bootstrap-tagsinput-latest\css\bootstrap-tagsinput.css" />
+    <Content Include="assets\plugins\bootstrap-tagsinput-latest\js\bootstrap-tagsinput.min.js" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\chart-am4\js\animated.js" />
+    <Content Include="assets\plugins\chart-am4\js\charts.js" />
+    <Content Include="assets\plugins\chart-am4\js\continentsLow.js" />
+    <Content Include="assets\plugins\chart-am4\js\core.js" />
+    <Content Include="assets\plugins\chart-am4\js\maps.js" />
+    <Content Include="assets\plugins\chart-am4\js\worldLow.js" />
+    <Content Include="assets\plugins\chart-chartjs\js\Chart.min.js" />
+    <Content Include="assets\plugins\chart-echarts\js\echarts-en.min.js" />
+    <Content Include="assets\plugins\chart-highchart\js\highcharts-3d.js" />
+    <Content Include="assets\plugins\chart-highchart\js\highcharts.js" />
+    <Content Include="assets\plugins\chart-knob\js\jquery.knob-custom.min.js" />
+    <Content Include="assets\plugins\chart-knob\js\jquery.knob.min.js" />
+    <Content Include="assets\plugins\chart-morris\css\morris.css" />
+    <Content Include="assets\plugins\chart-morris\js\morris.min.js" />
+    <Content Include="assets\plugins\chart-morris\js\raphael.min.js" />
+    <Content Include="assets\plugins\chart-nvd3\css\nv.d3.min.css" />
+    <Content Include="assets\plugins\chart-nvd3\js\d3.min.js" />
+    <Content Include="assets\plugins\chart-nvd3\js\nv.d3.min.js" />
+    <Content Include="assets\plugins\chart-nvd3\js\stream_layers.js" />
+    <Content Include="assets\plugins\chart-peity\js\jquery.peity.min.js" />
+    <Content Include="assets\plugins\ckeditor\js\balloon\ckeditor.js" />
+    <Content Include="assets\plugins\ckeditor\js\ckeditor.js" />
+    <Content Include="assets\plugins\ckeditor\js\document\ckeditor.js" />
+    <Content Include="assets\plugins\ckeditor\js\inline\ckeditor.js" />
+    <Content Include="assets\plugins\clipboard\js\clipboard.js" />
+    <Content Include="assets\plugins\cropper\css\cropper.css" />
+    <Content Include="assets\plugins\cropper\js\cropper.min.js" />
+    <Content Include="assets\plugins\data-tables\css\datatables.min.css" />
+    <Content Include="assets\plugins\data-tables\css\select.dataTables.min.css" />
+    <Content Include="assets\plugins\data-tables\js\buttons.colVis.min.js" />
+    <Content Include="assets\plugins\data-tables\js\datatables.min.js" />
+    <Content Include="assets\plugins\data-tables\js\dataTables.select.min.js" />
+    <Content Include="assets\plugins\editable\js\jquery.tabledit.js" />
+    <Content Include="assets\plugins\ekko-lightbox\css\ekko-lightbox.min.css" />
+    <Content Include="assets\plugins\ekko-lightbox\js\ekko-lightbox.min.js" />
+    <Content Include="assets\plugins\enjoyhint\css\Casino_Hand\casino_hand-webfont.svg" />
+    <Content Include="assets\plugins\enjoyhint\css\enjoyhint.css" />
+    <Content Include="assets\plugins\enjoyhint\js\jquery.enjoyhint.js" />
+    <Content Include="assets\plugins\enjoyhint\js\kinetic-v5.1.0.min.js" />
+    <Content Include="assets\plugins\fileupload\js\dropzone-amd-module.min.js" />
+    <Content Include="assets\plugins\flot\js\curvedLines.js" />
+    <Content Include="assets\plugins\flot\js\jquery.flot.categories.js" />
+    <Content Include="assets\plugins\flot\js\jquery.flot.js" />
+    <Content Include="assets\plugins\flot\js\jquery.flot.tooltip.min.js" />
+    <Content Include="assets\plugins\footable\css\footable.bootstrap.min.css" />
+    <Content Include="assets\plugins\footable\css\footable.standalone.min.css" />
+    <Content Include="assets\plugins\footable\js\footable.min.js" />
+    <Content Include="assets\plugins\fullcalendar\css\fullcalendar.min.css" />
+    <Content Include="assets\plugins\fullcalendar\js\fullcalendar.min.js" />
+    <Content Include="assets\plugins\fullcalendar\js\lib\jquery-ui.min.js" />
+    <Content Include="assets\plugins\fullcalendar\js\lib\moment.min.js" />
+    <Content Include="assets\plugins\google-maps\js\gmaps.js" />
+    <Content Include="assets\plugins\google-maps\js\markerclusterer.js" />
+    <Content Include="assets\plugins\gridstack\css\gridstack.min.css" />
+    <Content Include="assets\plugins\gridstack\js\gridstack.jQueryUI.min.js" />
+    <Content Include="assets\plugins\gridstack\js\gridstack.min.js" />
+    <Content Include="assets\plugins\gridstack\js\lodash.min.js" />
+    <Content Include="assets\plugins\inputmask\js\autoNumeric.js" />
+    <Content Include="assets\plugins\inputmask\js\inputmask.min.js" />
+    <Content Include="assets\plugins\inputmask\js\jquery.inputmask.min.js" />
+    <Content Include="assets\plugins\jquery-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="assets\plugins\jquery-ui\js\jquery-ui.js" />
+    <Content Include="assets\plugins\jquery-validation\js\jquery.validate.min.js" />
+    <Content Include="assets\plugins\jstree\css\style.min.css" />
+    <Content Include="assets\plugins\jstree\js\jstree.min.js" />
+    <Content Include="assets\plugins\lightbox2-master\css\lightbox.min.css" />
+    <Content Include="assets\plugins\lightbox2-master\images\loading.gif" />
+    <Content Include="assets\plugins\lightbox2-master\js\lightbox.min.js" />
+    <Content Include="assets\plugins\material-datetimepicker\css\bootstrap-material-datetimepicker.css" />
+    <Content Include="assets\plugins\material-datetimepicker\js\bootstrap-material-datetimepicker.js" />
+    <Content Include="assets\plugins\mini-color\css\jquery.minicolors.css" />
+    <Content Include="assets\plugins\mini-color\css\jquery.minicolors.png" />
+    <Content Include="assets\plugins\mini-color\js\jquery.minicolors.min.js" />
+    <Content Include="assets\plugins\modal-window-effects\css\md-modal.css" />
+    <Content Include="assets\plugins\modal-window-effects\js\classie.js" />
+    <Content Include="assets\plugins\modal-window-effects\js\modalEffects.js" />
+    <Content Include="assets\plugins\moment\js\moment.js" />
+    <Content Include="assets\plugins\multi-select\css\multi-select.css" />
+    <Content Include="assets\plugins\multi-select\img\switch.png" />
+    <Content Include="assets\plugins\multi-select\js\jquery.multi-select.js" />
+    <Content Include="assets\plugins\multi-select\js\jquery.quicksearch.js" />
+    <Content Include="assets\plugins\nestable-master\css\nestable.min.css" />
+    <Content Include="assets\plugins\nestable-master\js\jquery.nestable.js" />
+    <Content Include="assets\plugins\notification\css\notification.min.css" />
+    <Content Include="assets\plugins\notification\js\bootstrap-growl.min.js" />
+    <Content Include="assets\plugins\offline\css\offline-language-english.css" />
+    <Content Include="assets\plugins\offline\css\offline-theme-slide.css" />
+    <Content Include="assets\plugins\offline\js\offline.min.js" />
+    <Content Include="assets\plugins\owl-carousel\css\owl.carousel.min.css" />
+    <Content Include="assets\plugins\owl-carousel\css\owl.theme.default.min.css" />
+    <Content Include="assets\plugins\owl-carousel\css\owl.video.play.html" />
+    <Content Include="assets\plugins\owl-carousel\js\owl.carousel.min.js" />
+    <Content Include="assets\plugins\pnotify\css\pnotify.custom.min.css" />
+    <Content Include="assets\plugins\pnotify\js\notify-event.js" />
+    <Content Include="assets\plugins\pnotify\js\pnotify.custom.min.js" />
+    <Content Include="assets\plugins\prism\css\prism.min.css" />
+    <Content Include="assets\plugins\prism\js\prism.min.js" />
+    <Content Include="assets\plugins\range-slider\css\bootstrap-slider.min.css" />
+    <Content Include="assets\plugins\range-slider\js\bootstrap-slider.min.js" />
+    <Content Include="assets\plugins\ratting\css\bars-1to10.css" />
+    <Content Include="assets\plugins\ratting\css\bars-horizontal.css" />
+    <Content Include="assets\plugins\ratting\css\bars-movie.css" />
+    <Content Include="assets\plugins\ratting\css\bars-pill.css" />
+    <Content Include="assets\plugins\ratting\css\bars-reversed.css" />
+    <Content Include="assets\plugins\ratting\css\bars-square.css" />
+    <Content Include="assets\plugins\ratting\css\bootstrap-stars.css" />
+    <Content Include="assets\plugins\ratting\css\css-stars.css" />
+    <Content Include="assets\plugins\ratting\css\fontawesome-stars-o.css" />
+    <Content Include="assets\plugins\ratting\css\fontawesome-stars.css" />
+    <Content Include="assets\plugins\ratting\js\jquery.barrating.min.js" />
+    <Content Include="assets\plugins\select2\css\select2.min.css" />
+    <Content Include="assets\plugins\select2\js\select2.full.min.js" />
+    <Content Include="assets\plugins\session-idle-timeout\js\session_timeout.min.js" />
+    <Content Include="assets\plugins\smart-wizard\css\smart_wizard.min.css" />
+    <Content Include="assets\plugins\smart-wizard\css\smart_wizard_theme_arrows.min.css" />
+    <Content Include="assets\plugins\smart-wizard\css\smart_wizard_theme_circles.min.css" />
+    <Content Include="assets\plugins\smart-wizard\css\smart_wizard_theme_dots.min.css" />
+    <Content Include="assets\plugins\smart-wizard\js\jquery.smartWizard.min.js" />
+    <Content Include="assets\plugins\store-js\js\note.js" />
+    <Content Include="assets\plugins\store-js\js\store.min.js" />
+    <Content Include="assets\plugins\sweetalert\js\sweetalert.min.js" />
+    <Content Include="assets\plugins\timeline-master\js\hor-main.js" />
+    <Content Include="assets\plugins\timeline-master\js\modernizr.js" />
+    <Content Include="assets\plugins\timeline-master\js\ver-main.js" />
+    <Content Include="assets\plugins\tinymce\tinymce.min.js" />
+    <Content Include="assets\plugins\todo\js\todo.js" />
+    <Content Include="assets\plugins\toolbar\css\jquery.toolbar.css" />
+    <Content Include="assets\plugins\toolbar\js\jquery.toolbar.min.js" />
+    <Content Include="assets\plugins\vector-maps\css\jquery-jvectormap-2.0.2.css" />
+    <Content Include="assets\plugins\vector-maps\js\gdp-data.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-asia-mill.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-au-mill.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-ca-lcc.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-de-mill.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-in-mill.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-us-il-chicago-mill-en.js" />
+    <Content Include="assets\plugins\vector-maps\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="CustomJs\approveSurvey.js" />
+    <Content Include="CustomJs\asset.js" />
+    <Content Include="CustomJs\assetRequestion.js" />
+    <Content Include="CustomJs\assetTransfer.js" />
+    <Content Include="CustomJs\assignSurveyor.js" />
+    <Content Include="CustomJs\authorize.js" />
+    <Content Include="CustomJs\authorizeRecord.js" />
+    <Content Include="CustomJs\batch.js" />
+    <Content Include="CustomJs\behivemigrate.js" />
+    <Content Include="CustomJs\Chart1.js" />
+    <Content Include="CustomJs\Chart2.js" />
+    <Content Include="CustomJs\Commonlib.js" />
+    <Content Include="CustomJs\CompanyV.js" />
+    <Content Include="CustomJs\Dashboard.js" />
+    <Content Include="CustomJs\detailedReport.js" />
+    <Content Include="CustomJs\details.js" />
+    <Content Include="CustomJs\Export.js" />
+    <Content Include="CustomJs\growlnotification.js" />
+    <Content Include="CustomJs\login.js" />
+    <Content Include="CustomJs\lookUpType.js" />
+    <Content Include="CustomJs\lookUpValue.js" />
+    <Content Include="CustomJs\mdlholders.js" />
+    <Content Include="CustomJs\menu.min.js" />
+    <Content Include="CustomJs\MinesLeaseHolder.js" />
+    <Content Include="CustomJs\MinesLookupType.js" />
+    <Content Include="CustomJs\MinesLookupTypeValues.js" />
+    <Content Include="CustomJs\permitrequest.js" />
+    <Content Include="CustomJs\project.js" />
+    <Content Include="CustomJs\ProjectCycle.js" />
+    <Content Include="CustomJs\ProjectTypes.js" />
+    <Content Include="CustomJs\purchaseOrder.js" />
+    <Content Include="CustomJs\reason.js" />
+    <Content Include="CustomJs\ResetPassword.js" />
+    <Content Include="CustomJs\ReversedetailedReport.js" />
+    <Content Include="CustomJs\store.js" />
+    <Content Include="CustomJs\Structure.js" />
+    <Content Include="CustomJs\SubStructure.js" />
+    <Content Include="CustomJs\table-pagination.js" />
+    <Content Include="CustomJs\tag.js" />
+    <Content Include="CustomJs\tfbooks.js" />
+    <Content Include="CustomJs\transitformissue.js" />
+    <Content Include="CustomJs\UOM.js" />
+    <Content Include="CustomJs\User.js" />
+    <Content Include="CustomJs\UserControl.js" />
+    <Content Include="CustomJs\UserMenu.js" />
+    <Content Include="CustomJs\UserRole.js" />
+    <Content Include="CustomJs\util.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="lib\jquery\dist\jquery.js" />
+    <Content Include="lib\jquery\dist\jquery.min.js" />
+    <Content Include="lib\jquery\LICENSE.txt" />
+    <Content Include="Sample.aspx" />
+    <Content Include="Sample2.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample.aspx.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sample.aspx.designer.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sample2.aspx.cs">
+      <DependentUpon>Sample2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sample2.aspx.designer.cs">
+      <DependentUpon>Sample2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\datta\fonts\pct.eot" />
+    <Content Include="assets\fonts\datta\fonts\pct.ttf" />
+    <Content Include="assets\fonts\datta\fonts\pct.woff" />
+    <Content Include="assets\fonts\datta\fonts\pctd41d.eot" />
+    <Content Include="assets\fonts\feather\feather.woff" />
+    <Content Include="assets\fonts\fontawesome\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fontawesome\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fontawesome\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\fontawesome\feather.ttf" />
+    <Content Include="assets\fonts\themify\fonts\themify9f24.eot" />
+    <Content Include="assets\fonts\themify\fonts\themify9f24.ttf" />
+    <Content Include="assets\fonts\themify\fonts\themify9f24.woff" />
+    <Content Include="assets\fonts\themify\fonts\themifyd41d.eot" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\plugins\enjoyhint\css\Casino_Hand\casino_hand-webfont.eot" />
+    <Content Include="assets\plugins\enjoyhint\css\Casino_Hand\casino_hand-webfont.ttf" />
+    <Content Include="assets\plugins\enjoyhint\css\Casino_Hand\casino_hand-webfont.woff" />
+    <Content Include="assets\plugins\enjoyhint\css\Casino_Hand\casino_hand-webfontd41d.eot" />
+    <Content Include="lib\jquery-validation\LICENSE.md" />
+    <Content Include="lib\jquery\dist\jquery.min.map" />
+    <Content Include="Main.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51024</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
